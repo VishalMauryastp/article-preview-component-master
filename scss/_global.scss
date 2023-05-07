@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  background-color: hsl(210, 46%, 95%);
+}
+.d-f {
+  display: flex;
+}
+.jc-c {
+  justify-content: center;
+}
+.jc-sb {
+  justify-content: space-between;
+}
+.ai-c {
+  align-items: center;
+}
+.min-h-100 {
+  min-height: 100vh;
+}
+.b {
+  border: 2px solid red;
+}
+.share{
+  background-color:hsl(217, 19%, 35%)!important;
+  color:white !important;
+  @media (max-width: 768px) {
+    background-color: hsl(212, 23%, 69%)!important;
+  }
+}
+@media (max-width: 768px) {
+  .b-0 {
+    bottom: 0 !important;
+  }
+}
+@media (min-width: 768px) {
+   .d-n{
+    display: none;
+   } 
+  .d-b{
+    display: block;
+  }
+}

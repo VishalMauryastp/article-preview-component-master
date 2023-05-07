@@ -1,0 +1,135 @@
+.card {
+  width: 750px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 350px;
+  }
+  &__image {
+    width: 40%;
+    min-height: 276px;
+    background: left/cover no-repeat url("/src/images/drawers.jpg");
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  &__discripition {
+    width: 60%;
+    @media (max-width: 768px) {
+      width: 100%;
+      position: relative;
+    }
+    &__inner {
+      padding: 25px;
+      @media (max-width: 768px) {
+        padding: 25px 25px 20px 25px;
+      }
+      h1 {
+        font-size: 1.5rem;
+        color: hsl(217, 19%, 35%);
+        @media (max-width: 768px) {
+            font-size: 1.2rem;
+          }
+      }
+      p {
+        color: hsl(214, 17%, 51%);
+        margin-top: 20px;
+      }
+      &__author {
+        margin-top: 30px;
+        .profile {
+          img {
+            border-radius: 30px;
+            width: 50px;
+            height: 50px;
+          }
+          .name {
+            margin-left: 10px;
+            h2 {
+              color: hsl(217, 19%, 35%);
+              font-size: 1.1rem;
+              .publish_date {
+                color: hsl(212, 23%, 69%);
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+        .share_btn {
+          cursor: pointer;
+          width: 33.6px;
+          height: 33.6px;
+          border-radius: 300px;
+          z-index: 9999;
+          background-color: hsla(0, 0%, 52%, 0.248);
+         
+          @media (min-width: 768px) {
+            background-color: hsla(212, 23%, 69%, 0.267);
+            position: relative !important;
+          }
+          svg{
+            color: hsl(217, 19%, 35%) ;
+          }
+        }
+      }
+    }
+    .share_links {
+      border-radius: 10px;
+      padding: 10px 20px;
+      background-color:hsl(217, 19%, 35%);
+      position: absolute;
+      transform: translate(142%, -307%);
+
+      @media (max-width: 768px) {
+        border-radius: 0 0px 10px 10px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        height: 83px;
+        bottom: -100px;
+        transform: translate(0%, 0%);
+        width: 100%;
+        transition:all .5s ease-in-out;
+      }
+      &__inner {
+        width: 200px;
+        @media (min-width:768px ) {
+          padding: 0 10px;
+          width: 170px;  
+        }
+        h3 {
+          font-size: 1rem;
+          font-weight: 100;
+          color: azure;
+          letter-spacing: 2px;
+          @media (max-width:768px ) {
+            font-size: 1.2rem;  
+          }
+        }
+        img{
+          color: aliceblue;
+          cursor: pointer;
+          height: 15px;
+          @media (max-width:768px ) {
+            height: 20px;  
+          }
+        }
+      }
+      .downarrow{
+        position: absolute;
+        background-color:hsl(217, 19%, 35%);
+        border-bottom-width:0px ;
+        left: 50%;
+        width: 13px;
+        height: 13px;
+        transform: rotate(45deg);
+        @media (max-width:768px ) {
+          display: none;  
+        }
+      }
+    }
+  }
+}
